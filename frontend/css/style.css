@@ -1,0 +1,664 @@
+
+/* =================================
+   1. GLOBAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #174EA6;
+    --secondary: #18A58B;
+    --background: #F5F9FF;
+    --dark: #172B4D;
+    --muted: #64748B;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--dark);
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+    background: var(--white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a,
+.nav-buttons a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.register-btn {
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 11px 20px;
+    border-radius: 7px;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    padding: 85px 8% 65px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.tagline {
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   4. SEARCH FORM
+================================= */
+
+.search-container {
+    max-width: 1100px;
+    margin: auto;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.07);
+}
+
+#rideSearchForm {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #DCE4EE;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: var(--dark);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+}
+
+.search-btn {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 7px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #10558E;
+}
+
+
+/* =================================
+   5. POPULAR ROUTES
+================================= */
+
+.popular-routes {
+    padding: 55px 8%;
+}
+
+.popular-routes h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.popular-routes > p {
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.route-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.route-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #E5ECF5;
+    transition: 0.3s;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.route-card h3 {
+    margin-bottom: 12px;
+}
+
+.route-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =================================
+   6. FOOTER
+================================= */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =================================
+   7. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    #rideSearchForm {
+        flex-wrap: wrap;
+    }
+
+    .form-group {
+        flex: 1 1 40%;
+    }
+
+    .route-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    #rideSearchForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .route-list {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-routes {
+        padding: 40px 5%;
+    }
+
+}
+
+/* Search Results */
+
+.search-results {
+    max-width: 1100px;
+    margin: 25px auto 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    text-align: left;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.search-results:not(:empty) {
+    display: block;
+}
+
+.search-results h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.search-results p {
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+
+/* =================================
+   PUBLISH A RIDE SECTION
+================================= */
+
+.publish-section {
+    padding: 65px 8%;
+    background: #EAF3FC;
+}
+
+.publish-heading {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.publish-heading h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.publish-heading > p:last-child {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.publish-container {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+#publishRideForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.publish-btn {
+    grid-column: 1 / -1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--secondary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.publish-btn:hover {
+    background: #12816F;
+}
+
+.publish-message {
+    margin-top: 20px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+
+    .publish-section {
+        padding: 45px 5%;
+    }
+
+    #publishRideForm {
+        grid-template-columns: 1fr;
+    }
+
+    .publish-heading h2 {
+        font-size: 27px;
+    }
+
+    .publish-container {
+        padding: 20px;
+    }
+
+}
+
+
+
+/* =================================
+   AVAILABLE JOURNEY CARDS
+================================= */
+
+.journey-card {
+    background: #F5F9FF;
+    border: 1px solid #DCE7F2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.journey-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.journey-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.journey-card p {
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.book-ride-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #1769AA;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.book-ride-btn:hover {
+    background-color: #12558A;
+}
+
+
+/* ==========================================
+   DAY 7: DRIVER DASHBOARD
+========================================== */
+
+.driver-dashboard {
+    padding: 60px 8%;
+    background: #F5F9FF;
+}
+
+.dashboard-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-heading h2 {
+    color: #1769AA;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.dashboard-heading p {
+    color: #64748B;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+#driverBookingLookupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dashboard-btn {
+    padding: 13px 22px;
+    background: #1769AA;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.dashboard-btn:hover {
+    background: #12558A;
+}
+
+.driver-booking-results {
+    margin-top: 25px;
+}
+
+.driver-booking-card {
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #D7E3F0;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.driver-booking-card h3 {
+    color: #1769AA;
+    margin-bottom: 12px;
+}
+
+
+
+/* ==========================================
+   DAY 7: ACCEPT AND REJECT BUTTONS
+========================================== */
+
+.accept-booking-btn,
+.reject-booking-btn {
+    padding: 10px 20px;
+    margin: 12px 10px 0 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.accept-booking-btn {
+    background: #18A58B;
+}
+
+.accept-booking-btn:hover {
+    background: #12836F;
+}
+
+.reject-booking-btn {
+    background: #DC3545;
+}
+
+.reject-booking-btn:hover {
+    background: #B52A37;
+}
+
+
+
+/* ==========================================
+   DAY 8: PASSENGER BOOKING DASHBOARD
+========================================== */
+
+.passenger-dashboard {
+    padding: 60px 8%;
+    background: #FFFFFF;
+}
+
+.passenger-dashboard-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.passenger-dashboard-heading h2 {
+    color: #1769AA;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.passenger-dashboard-heading p {
+    color: #64748B;
+}
+
+.passenger-dashboard-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: #F5F9FF;
+    border-radius: 15px;
+}
+
+#passengerBookingLookupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.passenger-dashboard-btn {
+    padding: 13px 22px;
+    background: #1769AA;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.passenger-dashboard-btn:hover {
+    background: #12558A;
+}
+
+.passenger-booking-results {
+    margin-top: 25px;
+}
+
+.passenger-booking-card {
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #D7E3F0;
+    border-radius: 10px;
+    background: white;
+}
+
+.passenger-booking-card h3 {
+    color: #1769AA;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   DAY 8: BOOKING STATUS STYLING
+========================================== */
+
+.booking-status {
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    background: #E2E8F0;
+    color: #334155;
+}
+
+.passenger-booking-card {
+    line-height: 1.8;
+}
+
+.passenger-booking-card p {
+    margin-bottom: 8px;
+}

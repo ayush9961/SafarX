@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website title -->
+    <title>Raasta | Travel Together</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Raasta<span>.</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#search">Find a Ride</a>
+            <a href="#publish">Publish a Ride</a>
+            <a href="#how-it-works">How It Works</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="#login" class="login-btn">Login</a>
+            <a href="#register" class="register-btn">Sign Up</a>
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">
+                    TRAVEL TOGETHER. GO FURTHER.
+                </p>
+
+                <h1>
+                    Every journey has an empty seat.
+                </h1>
+
+                <p class="hero-description">
+                    Connect with people travelling in the same direction.
+                    Share journeys, discover rides and make travel easier.
+                </p>
+
+            </div>
+
+
+            <!-- Journey Search Form -->
+            <div class="search-container" id="search">
+
+                <form id="rideSearchForm">
+
+                    <div class="form-group">
+
+                        <label for="from">From</label>
+
+                        <input
+                            type="text"
+                            id="from"
+                            placeholder="Enter starting city"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="to">To</label>
+
+                        <input
+                            type="text"
+                            id="to"
+                            placeholder="Enter destination"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="travelDate">Travel Date</label>
+
+                        <input
+                            type="date"
+                            id="travelDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="passengers">Passengers</label>
+
+                        <select id="passengers">
+
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+
+                        </select>
+
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="passengerName">Your Name</label>
+                        <input type="text"
+        id="passengerName"
+        placeholder="Enter your name"
+        required
+    >
+</div>
+
+<div class="form-group">
+    <label for="passengerPhone">Mobile Number</label>
+    <input
+        type="tel"
+        id="passengerPhone"
+        placeholder="10-digit mobile number"
+        pattern="[0-9]{10}"
+        maxlength="10"
+        required
+    >
+</div>
+
+                    <button type="submit" class="search-btn">
+                        Search Rides
+                    </button>
+
+                </form>
+
+            </div>
+
+                        <!-- Search Results -->
+            <div id="searchResults" class="search-results"></div>
+
+        </section>
+
+        
+<!-- Publish a Ride Section -->
+
+
+<!-- ================= DRIVER PUBLISH SECTION ================= -->
+
+<section class="publish-section" id="publish">
+
+    <div class="publish-heading">
+
+        <h2>Going Somewhere?</h2>
+
+        <p>
+            Publish your journey and find passengers
+            travelling in the same direction.
+        </p>
+
+    </div>
+
+    <div class="publish-container">
+
+        <form id="publishRideForm">
+
+            <!-- DRIVER STARTING CITY -->
+
+            <div class="form-group">
+                <label for="driverFrom">Starting City</label>
+
+                <input
+                    type="text"
+                    id="driverFrom"
+                    placeholder="Enter starting city"
+                    required
+                >
+            </div>
+
+
+            <!-- DRIVER DESTINATION -->
+
+            <div class="form-group">
+                <label for="driverTo">Destination City</label>
+
+                <input
+                    type="text"
+                    id="driverTo"
+                    placeholder="Enter destination"
+                    required
+                >
+            </div>
+
+
+            <!-- DRIVER NAME -->
+
+            <div class="form-group">
+                <label for="driverName">Driver Name</label>
+
+                <input
+                    type="text"
+                    id="driverName"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+
+            <!-- DRIVER MOBILE NUMBER -->
+
+            <div class="form-group">
+                <label for="driverPhone">Driver Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="driverPhone"
+                    placeholder="10-digit mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+            </div>
+
+
+            <!-- TRAVEL DATE -->
+
+            <div class="form-group">
+                <label for="driverDate">Travel Date</label>
+
+                <input
+                    type="date"
+                    id="driverDate"
+                    required
+                >
+            </div>
+
+
+            <!-- DEPARTURE TIME -->
+
+            <div class="form-group">
+                <label for="departureTime">Departure Time</label>
+
+                <input
+                    type="time"
+                    id="departureTime"
+                    required
+                >
+            </div>
+
+
+            <!-- AVAILABLE SEATS -->
+
+            <div class="form-group">
+                <label for="availableSeats">Available Seats</label>
+
+                <select id="availableSeats" required>
+                    <option value="1">1 Seat</option>
+                    <option value="2">2 Seats</option>
+                    <option value="3">3 Seats</option>
+                    <option value="4">4 Seats</option>
+                </select>
+            </div>
+
+
+            <!-- VEHICLE TYPE -->
+
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type</label>
+
+                <select id="vehicleType" required>
+                    <option value="">Select Vehicle</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                </select>
+            </div>
+
+            <!-- ESTIMATED CONTRIBUTION PER PASSENGER -->
+<div class="form-group">
+    <label for="journeyContribution">
+        Estimated Contribution Per Passenger (₹)
+    </label>
+
+    <input
+        type="number"
+        id="journeyContribution"
+        placeholder="Enter demo contribution amount"
+        min="1"
+        step="1"
+        required
+    >
+    <small>Demo amount only. No real payment will be collected.</small>
+</div>
+
+
+            <!-- PUBLISH BUTTON -->
+
+            <button type="submit" class="publish-btn">
+                Publish My Journey
+            </button>
+
+        </form>
+
+
+        <!-- PUBLISH SUCCESS MESSAGE -->
+
+        <div
+            id="publishMessage"
+            class="publish-message">
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ===================  Popular Routes -->
+
+        
+<!-- ================= DRIVER BOOKING MANAGEMENT ================= -->
+
+
+<!-- ================= PASSENGER BOOKING DASHBOARD ================= -->
+
+<section class="passenger-dashboard" id="passengerDashboard">
+
+    <div class="passenger-dashboard-heading">
+
+        <h2>My Bookings</h2>
+
+        <p>
+            Track your ride requests and booking confirmations.
+        </p>
+
+    </div>
+
+    <div class="passenger-dashboard-container">
+
+        <form id="passengerBookingLookupForm">
+
+            <div class="form-group">
+
+                <label for="bookingPassengerPhone">
+                    Enter Your Registered Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="bookingPassengerPhone"
+                    placeholder="Enter your 10-digit mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+            </div>
+
+            <button
+                type="submit"
+                class="passenger-dashboard-btn">
+                Check My Bookings
+            </button>
+
+        </form>
+
+
+        <!-- PASSENGER BOOKINGS WILL APPEAR HERE -->
+
+        <div
+            id="passengerBookingResults"
+            class="passenger-booking-results">
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="driver-dashboard" id="driverDashboard">
+
+    <div class="dashboard-heading">
+
+        <h2>Driver Dashboard</h2>
+
+        <p>
+            Manage passenger booking requests for your journeys.
+        </p>
+
+    </div>
+
+    <div class="dashboard-container">
+
+        <form id="driverBookingLookupForm">
+
+            <div class="form-group">
+
+                <label for="dashboardDriverPhone">
+                    Enter Your Registered Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="dashboardDriverPhone"
+                    placeholder="Enter your 10-digit mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+            </div>
+
+            <button type="submit" class="dashboard-btn">
+                View Booking Requests
+            </button>
+
+        </form>
+
+        <!-- Booking requests will appear here -->
+
+        <div
+            id="driverBookingResults"
+            class="driver-booking-results">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <section class="popular-routes">
+
+            <h2>Popular Routes</h2>
+
+            <p>
+                Explore some of the frequently travelled routes.
+            </p>
+
+            <div class="route-list">
+
+                <div class="route-card">
+                    <h3>Pune → Baramati</h3>
+                    <p>Discover available journeys</p>
+                </div>
+
+                <div class="route-card">
+                    <h3>Pune → Mumbai</h3>
+                    <p>Discover available journeys</p>
+                </div>
+
+                <div class="route-card">
+                    <h3>Pune → Satara</h3>
+                    <p>Discover available journeys</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Raasta. Every journey connects us.</p>
+
+    </footer>
+
+
+    <!-- Connect JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

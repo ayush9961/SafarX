@@ -1,0 +1,21 @@
+﻿# Backup files
+Script_backup.js
+*_backup.js
+
+# Java build files
+*.class
+target/
+*.jar
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
