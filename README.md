@@ -1,12 +1,12 @@
-﻿# Raasta - Travel Together
+﻿# SafarX - Travel Together
 
-Raasta is a travel-sharing web application that connects passengers and drivers travelling to the same destination.
+SafarX is a travel-sharing web application that connects passengers and drivers travelling to the same destination.
 
 ## Problem Statement
 
 During festivals and holidays, finding available transportation can be difficult. Many private vehicles also travel with empty seats.
 
-Raasta aims to connect passengers and drivers through a shared travel platform.
+SafarX aims to connect passengers and drivers through a shared travel platform.
 
 ## Features
 
